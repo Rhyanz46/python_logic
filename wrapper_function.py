@@ -91,28 +91,48 @@ del nama
 del rulles
 del app
 
+# ---------------------------------------------------------
+
+
+nama = "arian"
+
+def rulles(func):
+    def detailcek():
+        if nama != "a":
+            print("kau bukan pemilik akun v2")
+            return
+        return func()
+    return detailcek
+
+@rulles
+def app():
+    print("hello guys")
+
+
+app() # untuk menjalankannya
+
+del nama
+del rulles
+del app
+
+
 #---------------------------------------------------------- Dengan Parameter
-
-
-nama = "karyawan"
 
 def rulles(*argument):
     def cek(func):
-        def detailcek():
-            # if nama != nama_input:
-            print("kau bukan admin")
-            print(argument)
+        def func_anak():
+            for a in argument:
+                print(a)
             return func()
             # return argument
-        return detailcek
+        return func_anak
     return cek
 
-@rulles(["admin", "ded"])
+@rulles("admin" , "ded", "ded")
 def app():
     print("hello guys")
 
 app() # untuk menjalankannya
 
-del nama
 del rulles
 del app
