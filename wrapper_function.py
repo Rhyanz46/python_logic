@@ -136,3 +136,55 @@ app() # untuk menjalankannya
 
 del rulles
 del app
+
+
+
+nama = "arian"
+
+def rulles():
+    def cek(func):
+        if nama == "arian":
+            return func
+        else:
+            def wrong():
+                print("kau bukan arian")
+            return wrong
+    return cek
+
+@rulles()
+def app():
+    data = 'ini adalah nilai dari sebuah function yang bernama "app"'
+    """saya adalah documentation"""
+    print("kau adalah arian")
+
+app()
+print(app.__doc__) #tidak bisa membaca atribut
+del app
+
+
+from functools import wraps
+
+
+nama = "arian"
+
+def rulles():
+    def cek(func):
+        if nama == "arian":
+            return func
+        else:
+            def wrong():
+                print("kau bukan arian")
+            return wrong
+    return cek
+
+@rulles()
+def app():
+    data = 'ini adalah nilai dari sebuah function yang bernama "app"'
+    """saya adalah documentation"""
+    print("kau adalah arian")
+
+app()
+print(app.__doc__) #tidak bisa membaca atribut / tidak callable
+del app
+
+
