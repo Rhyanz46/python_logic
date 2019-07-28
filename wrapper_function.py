@@ -157,12 +157,10 @@ def rulles():
 def app():
 
     """saya adalah documentation"""
-    
-    data = 'ini adalah nilai dari sebuah function yang bernama "app"'
     print("hello arian")
 
 app()
-print(app.__doc__)  #bisa membaca atribut => karena dia callable
+print(app.__doc__)  #bisa membaca atribut tertentu => karena dia callable
 del app
 del rulles
 del nama
@@ -185,12 +183,10 @@ def rulles(func):
 def app():
 
     """saya adalah documentation"""
-
-    data = 'ini adalah nilai dari sebuah function yang bernama "app"'
     print("hai arian")
 
 app()
-print(app.__doc__) #tidak bisa membaca atribut global => karena tidak callable maka di perlukan wraps function dari functools
+print(app.__doc__) #tidak bisa membaca atribut tertentu => karena tidak callable maka di perlukan wraps function dari functools
 del app
 del nama
 
@@ -211,11 +207,9 @@ def rulles(func):
 def app():
 
     """saya adalah documentation"""
-
-    data = 'ini adalah nilai dari sebuah function yang bernama "app"'
     print("haaaii arian")
 
 app()
-print(app.__doc__) #tidak bisa membaca atribut global => karena tidak callable maka di perlukan wraps function dari functools
+print(app.__doc__) #tidak bisa membaca atribut tertentu => karena tidak callable maka di perlukan wraps function dari functools
 del app
 del nama
