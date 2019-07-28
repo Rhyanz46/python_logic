@@ -190,7 +190,7 @@ def app():
     print("hai arian")
 
 app()
-print(app.__doc__) #tidak bisa membaca atribut => karena tidak callable maka di perlukan wraps function dari functools
+print(app.__doc__) #tidak bisa membaca atribut global => karena tidak callable maka di perlukan wraps function dari functools
 del app
 del nama
 
@@ -216,6 +216,6 @@ def app():
     print("haaaii arian")
 
 app()
-print(app.__doc__) #tidak bisa membaca atribut => karena tidak callable maka di perlukan wraps function dari functools
+print(app.__doc__) #tidak bisa membaca atribut global => karena tidak callable maka di perlukan wraps function dari functools
 del app
 del nama
