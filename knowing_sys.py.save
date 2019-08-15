@@ -1,0 +1,4 @@
+import sys
+
+print('this is data : {}'.format(sys.argv[1
+]))
